@@ -36,9 +36,12 @@
 * What should they name this function? Well... what is the function going to do? I intend to have this button fire off this function which will change the label in the center of the screen to display "Hello!"
 * This will the first time they see something like the following. Break it down piece by piece making no assumptions. If we can solidify what these parts are (which they should have a pretty good understanding already considering they've already worked with functions). But they will get tripped up and scarred considering they see this word AnyObject along with @IBAction.  
 ![Function](http://i.imgur.com/ippIx2H.png)  
-* Have them type something like the following then run their app (telling them to tape the Hello World button)  
+* Have them type something like the following then run their app (telling them to tap the Hello World button)  
 ![Hello world](http://i.imgur.com/mhPkix1.png)  
-* Have them do something similar with all the other buttons. 
+* Have them do something similar to all the other buttons. 
+* Ultimately their code should wind up looking like this,  
+![final product](http://i.imgur.com/K58ZYq0.png)  
+
 
 
 <a href='https://learn.co/lessons/OutletTargetAction' data-visibility='hidden'>View this lesson on Learn.co</a>

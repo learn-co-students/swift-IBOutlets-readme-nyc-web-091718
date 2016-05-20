@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="CIk-8o-wom">
             <objects>
-                <viewController id="bB3-1A-guk" sceneMemberID="viewController">
+                <viewController id="bB3-1A-guk" customClass="ViewController" customModule="IBOutletFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uWg-VX-TBt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -17,6 +17,9 @@
                                 <rect key="frame" x="120" y="74" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Hello World"/>
+                                <connections>
+                                    <action selector="helloWorld:" destination="bB3-1A-guk" eventType="touchUpInside" id="hHc-uq-HMQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0D2-qS-J2b">
                                 <rect key="frame" x="107" y="112" width="107" height="30"/>
@@ -29,7 +32,7 @@
                                 <state key="normal" title="Unicorn!"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a8z-5F-hCv">
-                                <rect key="frame" x="139" y="273" width="42" height="21"/>
+                                <rect key="frame" x="92" y="273" width="137" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,10 +41,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="textDisplay" destination="a8z-5F-hCv" id="42J-zo-Cz4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ht5-0V-sP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112" y="371"/>
+            <point key="canvasLocation" x="191" y="299"/>
         </scene>
     </scenes>
 </document>

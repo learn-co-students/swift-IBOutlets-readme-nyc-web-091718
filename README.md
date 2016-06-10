@@ -1,4 +1,4 @@
-# IBOutlets (IB = Interface Builder)
+# IBOutlets & IBActions
 
 <img src="http://cdn2.hubspot.net/hubfs/326641/yoda.jpg" alt="Drawing" style="width: 200px;"/>  
 > Do, or do not. There is no 'try'.

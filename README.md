@@ -1,18 +1,18 @@
 # IBOutlets & IBActions
 
-<img src="http://cdn2.hubspot.net/hubfs/326641/yoda.jpg" alt="Drawing" style="width: 200px;"/>  
+![Drawing](http://cdn2.hubspot.net/hubfs/326641/yoda.jpg)
 > Do, or do not. There is no 'try'.
 
-## Learning Objectives - The student should be able to..
+## Learning Objectives - The student should be able to...
 
-* Explain that the files they will write their code in within Xcode will be the .swift files they see in the Project Navigator.
-* Connect the View Controller in the storyboard file to the ViewController.swift file.
+* Explain that the files they will write their code in within Xcode will be the `.swift` files they see in the Project Navigator.
+* Connect the View Controller in the storyboard file to the `ViewController.swift` file.
 * Locate and use the Assistant Editor
-* Pull up the Assistant Editor using the hotkey, command + option + return.
-* Hide the Assistant Editor using the hotkey, command + return.
-* control + drag a Label/Button/View from the View Controller into their ViewController.swift file and name it. They should know the proper naming convention, similar to how they've been naming their variables (lower camel case)
+* Pull up the Assistant Editor using the hotkey <kbd>Command</kbd> + <kbd>Option</kbd> + <kbd>Return</kbd>.
+* Hide the Assistant Editor using the hotkey <kbd>command</kbd> + <kbd>Return</kbd>.
+* <kbd>Control</kbd> + drag a Label/Button/View from the View Controller into their `ViewController.swift` file and name it. They should know the proper naming convention, similar to how they've been naming their variables (lower camel case)
 
-## What the student can do at this point 
+## What the student can do at this point
 
 * Has a general overview of Xcode and is able to create a new project.
 * Knows where to locate the testing file within Xcode.
@@ -22,35 +22,275 @@
 * Can drag a View Controller onto the canvas.
 * Can locate and drag items from the Object Library.
 * Can locate the Attributes Inspector and change the Background color of Views
-* They will have just learned how to connect the ViewController.swift file and understand it's view life cycle.
+* They will have just learned how to connect the `ViewController.swift` file and understand its view life cycle.
 
+## Designing the Interface
 
-## Outline / Notes
+So far in your lessons, you have learned how to navigate Xcode to build graphical user interfaces. You have learned about the view life cycle, and how to write some code to power your application. In this lesson, you'll be introduced to the way in which graphical components of your application are tied to your Swift code, in order to make your app respond to user actions like button presses.
 
-*  Explain to the student that writing their code in a .swift file within Xcode is identical to how they wrote their code within a Playground file. In fact, they actually were writing their code in a .swift file when working with the playground file.
-* Be thorough with screenshots and an explanation as to how they setup the Class of their View Controller to the ViewController.swift file.
-* When selecting any of the UI elements that are located in their View. Explain how they can use the Attributes inspector to change the background color, font (if applicable).
-* If you like, you can have them either follow along with you through screenshots or have them open an Xcode project (which is included) that makes them follow along. I think I'm more inclined to have them follow along with you in an Xcode file. I've included the Xcode file to this repo. (Auto Layout & Size Classes have been disabled)
-* Walk them through dragging a View Controller onto the canvas. In doing so, have them drag one label to the middle of the View and run the app. In running the app, they should see that the simulator is showing a black screen (where's our label?!). They were taught in a prior reading that they should look to set the Initial View Controller in the Attributes inspector, so after they run the app, remind them that they have to do this.
-* Walk them through creating something like this (show them this screenshot as well!) Not using Auto Layout:  
+To get started, open up the Xcode project distributed in this repo (it's at `IBOutletFun/IBOutletFun.xcodeproj`). Take a look at some of the files included in the project, particularly `Main.storyboard` and `ViewController.swift`. Like before, you will design your app's interface in `Main.storyboard`, and write the code that makes it work in `ViewController.swift`.
+
+Right now, both these files are mostly empty. Let's start with designing the interface (you have to start somewhere, after all). Click once on `Main.storyboard` in the file listing to display it in the Interface Builder editor.
+
+Like before, your app first needs a _view controller_. Drag a new view controller from the object library onto `Main.storyboard`'s canvas.
+
+![Create a new view controller](.images/xcode01.png)
+
+The first thing you need to do is associate this view controller with the code you are about to write. The Xcode project already includes a file called `ViewController.swift`, which defines one class, `ViewController` (creative names, huh?). You can associate your new view controller with this class in the Attribute Inspector. First, make sure that **View Controller** is selected in the object listing.
+
+![View Controller](.images/xcode02.png)
+
+Then bring up the Attributes Inspector. The section at the top is called **Custom Class**. This is where you will associate the view controller with its code. In the **Class** text box, start typing in `ViewController`. After you type a few letters (probably just `V`, in fact), the full name `ViewController`, will autocomplete. You can press <kbd>Return</kbd> to accept the autocompletion, or type out `ViewController` yourself. Either way, make sure `ViewController` is entered in the **Class** text field.
+
+![ViewController](.images/xcode03.png)
+
+You can click the grey arrow next to **ViewController** in the **Class** text field, which should open `ViewController.swift` in an editor pane. This will show that you have correctly set up the association between the view controller in `Main.storyboard` and the code that backs it. You're not quite ready to write any code yet, though, so switch back to `Main.storyboard`, either by hitting the back button in Xcode's navigate ribbon, or by clicking on `Main.storyboard` in the file listing.
+
+Ultimately, you want your interface to look like this:
 
 ![Hello World](http://i.imgur.com/7dIlWD3.png)
-* After having them create this, have them run the app and tap the buttons. They can see obviously that they are selecting these buttons BUT nothing is happening. We want actionable things to occur when these buttons are tapped. We want to display text to the user of our app where it states Label (just leaving it as Label is boring). This is a fundmanetal thing in making iOS apps, someone taps something and then something else happens. The "something else happens" is where we come in! We build functions (similar to how we did in prior readings/labs). These functions dictate what occurs on screen (and off screen). But how do we do that? After posing that question, then go into detail how they hook it up to a View Controller. We need a place where we could write code associated with these visual elements, where do we do that? In our ViewController.swift file.
-* I personally like setting up my Assistant editor as follows (if you want to show them this as well). I find it easier to work on a laptop screen, 
-![Xcode](http://i.imgur.com/x8xa7vn.png)
-* When dragging over the three buttons, make sure the Connection is set as Action (explain why).   
-![Button thing](http://i.imgur.com/qVAAvJF.png)  
-* The following will be new to them, make sure to explain (it can be a brief description of what these various options are or you can take this further if you like).  
-![Selection](http://i.imgur.com/ZfATNmr.png)  
-* What should they name this function? Well... what is the function going to do? I intend to have this button fire off this function which will change the label in the center of the screen to display "Hello!"
-* This will the first time they see something like the following. Break it down piece by piece making no assumptions. If we can solidify what these parts are (which they should have a pretty good understanding already considering they've already worked with functions). But they will get tripped up and scarred considering they see this word AnyObject along with @IBAction.  
-![Function](http://i.imgur.com/ippIx2H.png)  
-* Have them type something like the following then run their app (telling them to tap the Hello World button)  
-![Hello world](http://i.imgur.com/mhPkix1.png)  
-* Have them do something similar to all the other buttons. 
-* Ultimately their code should wind up looking like this,  
-![final product](http://i.imgur.com/K58ZYq0.png)  
 
+What parts does that interface consist of?
 
+1. A view controller and main view (which you just added)
+2. Three buttons marked **Hello World**, **Goodbye World**, and **Unicorn!**
+3. A label, simply marked **Label**.
+
+Not a lot of stuff there, but it's enough to get a thorough demonstrate of how to create an app that responds to user input. Let's get started on laying it out!
+
+First, let's put the label on the main view. Find a label in the object library (remember, you can filter the library by a search string) and drop it in the middle of the interface.
+
+![Add a new label](.images/xcode04.png)
+
+Resize it horizontally so it takes up most of the width of the view. In its Attributes Inspector, change its text alignment so the text is centered.
+
+![Centered text](.images/xcode11.png)
+
+Build and run your application. Did you see your interface with the label in the simulator?
+
+Probably not! You probably got this error message in the debugger console instead:
+
+![Error!](.images/xcode05.png)
+
+What does that error mean?
+
+Think back to your previous lessons. Are you forgetting something? Maybe…an _initial view controller?_ That's right—you haven't set up the initial view controller yet! Remember, every iOS application has to have one—and only one—initial view controller.
+
+Quit the simulator and go back to Xcode. Select the view controller in your Interface Builder editor. In the Attributes Inspector, make sure **Is Initial View Controller** is checked.
+
+![Is Initial View Controller](.images/xcode06.png)
+
+Now try building and running your application again. This time it should work flawlessly, but there's still not much to it. Before you write some code, though, finish up with the layout of the interface.
+
+You need to add three buttons to the interface. Like labels, buttons can be dragged from the object library (hint: filter by "button"). You can double-click on the button to change its text. Change the buttons so they read **Hello World**, **Goodbye **World**, and **Unicorn!**. When you're done, your interface should be complete, and look like this:
+
+![Hello World](http://i.imgur.com/7dIlWD3.png)
+
+Build and run your application again. Press on some of the buttons. They respond like buttons—you're clearly pressing them—but they don't do anything yet! Ideally, we want them to change the text label below so pressing each of them changes the label to a unique string of text, but right now they just sit there, inert, accepting presses but doing nothing in return. That's about to change.
+
+## And Now, the Code
+
+Now it's time for the part you've patiently been waiting for: Writing the code that will actually make your app _do_ something.
+
+But first, a primer on two important concepts: _IB outlets_ and _IB actions_.
+
+Swift code is associated with graphical interface elements through the use of outlets and actions. An _IB Outlet_ (short for _Interface Builder outlet_) is a _graphical_ component that your code _links_ to. An _IB action_ is the reverse: It is a method in your _code_ that a _graphical component_ links to. It is through these connections that your graphical components are able to do something in response to user input.
+
+### IB Outlets
+
+Firs things first: You want button presses to change the text label in your interface. Your code first has to know that the text label even exists and link to it. It does this by creating an _IB outlet_ between the view controller code and the text label.
+
+The first thing you want to do is display your view's code alongside the view itself. Xcode offers a handy way of doing this: the Assistant Editor. Do you see the two sets of buttons in the top right corner of the Xcode toolbar? The second one from the left, marked with two circles, allows you to open up the Assistant Editor.
+
+![Assistant Editor button](.images/xcode08.png)
+
+This will open up `ViewController.swift` in an editor pane. If you're on a small screen, you might want to put the editor on the _bottom_ instead of the left hand side, which you can do by selecting **Assistant Editors on Bottom** from the Assistant Editor button.
+
+![Assistant Editors on Bottom](.images/xcode07.png)
+
+After you've opened the editor, you should see `ViewController.swift` at the bottom of your screen.
+
+![`ViewController.swift`](.images/xcode09.png)
+
+This will make it a lot easier to enter new code and show the relationship between the code and your user interface.
+
+Back to outlets. You first need to make sure that your code is aware that a text label exists, and link to it (so it can eventually change the text on the label).
+
+First, you need to declare an outlet in `ViewController.swift`. Add this code to the `ViewController` class definition:
+
+```swift
+@IBOutlet weak var textDisplay: UILabel!
+```
+
+When you're done, the definition of `ViewController` will look like this:
+
+```swift
+class ViewController: UIViewController {
+
+    @IBOutlet weak var textDisplay: UILabel!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
+```
+
+What's going on with this code? First, you told the Swift compiler that you were declaring an IB Outlet, using the `@IBOutlet` directive. That looks a bit weird, and you haven't seen that before, but all it does is tells Swift, "Hey, I'm about to declare a variable that has a connection to a user interface component." You then declared the variable to be `weak`. You'll learn more about `weak` variables later; for now, you just have to know that all IB outlets are `weak` variables. Finally, you declared a variable (using the `var` keyword) named `textDisplay`. This variable is of type `UILabel!`, because `UILabel`s are exciting. (Actually, it has to do with Swift's `Optional` types, which you'll learn about in a future lesson. For now, just know that IB outlets' types always end in an exclamation point `!`.)
+
+Now it's time to connect this outlet to its user interface component! Xcode makes this really, really easy. You see how there's a little grey dot next to the line of code you just added? That's how you connect your `textDisplay` variable to a user interface component. Click and hold your cursor on the little dot, then drag your cursor to the label (helpfully marked **Label**) in your user interface. (If you're on a small screen, you may have to scroll the Interface Builder pane down a bit in order to see the label.) Drag the cursor over the label. Once it is highlighted, release your mouse button. The connection has now been set up. You can confirm this by checking the dot next to the line of code you added: It should be filled in now, instead of empty.
+
+![IBOutlet connection](.images/xcode10.png)
+
+In order to demonstrate this connection, change the label from the default ("Label") to "Zzz..." in the view controller's `viewDidLoad()` method. Add this line to the end of `viewDidLoad()`:
+
+```swift
+textDisplay.text = "Zzz..."
+```
+
+Your definition of `ViewController` should now look like this:
+
+```swift
+class ViewController: UIViewController {
+
+    @IBOutlet weak var textDisplay: UILabel!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        textDisplay.text = "Zzz..."
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
+```
+
+Build and run your application. Notice that the label now says "Zzz..." instead of "Label"—you used the IB outlet connection to change it in code!
+
+Now, let's make the buttons do something cool.
+
+### IB Actions
+
+Consider the problem: You want your code to respond to button presses. You kind of know about these things called "IB actions", but you don't really know exactly what they are. How would you go about solving this problem? How would you link up user interface elements, like buttons, to code?
+
+If you guessed "functions" or "methods", you're absolutely correct. An _IB action_ is nothing more than a method in your view controller class that is tied to a user interface element. When the user interacts with the element (pressing it, entering text, swiping it, and so forth), the method associated with that element is called.
+
+Creating new IB actions in Xcode is easy (and kind of fun!). First, hold down <kbd>Control</kbd> and drag from the **Hello World** button in your interface to the `ViewController.swift` file. (Make sure you hold down <kbd>Control</kbd> and _drag_—if you just click, you will bring up a contextual menu.) Drag your mouse to the empty space _above_ (not _inside!_) the `viewDidLoad()` method, then release the mouse button.
+
+![Drag a new IB action](.images/xcode12.png)
+
+You will get a popup prompting you to set the type of the connection, and give it a name. Make sure the **Connection** type is set to **Action** (it is set to **Outlet** by default!) and change the **Name** to `helloWorld`, then click the **Connect** button.
+
+![Create a new IB action](.images/xcode13.png)
+
+You'll see a new method in your `ViewController` definition:
+
+```swift
+@IBAction func helloWorld(sender: AnyObject) {
+}
+```
+
+What's different about this compared to other method definitions you have seen? Namely, it is prefixed with the `@IBAction` directive. This tells the Swift compiler that this method is an Interface Builder action—it is connected to a view component (in this case, the **Hello World** button). You'll also see a little grey circle in the gutter next to this method definition, signifying that it is a connected action.
+
+Now let's write some code to make that method _do_ something.
+
+Remember that this method is called when the button is pressed. You want to change the label to say "Hello, world!" instead of "Label" or "Zzz...". You can change the text by adding this line to the body of `helloWorld(sender:)`:
+
+```swift
+textDisplay.text = "Hello, world!"
+```
+
+Let's add a `print()` call so you can see when this method is called, too:
+
+```swift
+print("Pressed Hello World button")
+```
+
+Now your complete definition of `ViewController` should look like this:
+
+```swift
+class ViewController: UIViewController {
+
+    @IBOutlet weak var textDisplay: UILabel!
+
+    @IBAction func helloWorld(sender: AnyObject) {
+        print("Pressed Hello World button")
+        textDisplay.text = "Hello, world!"
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        textDisplay.text = "Zzz..."
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
+```
+
+Build and run your application. Press the **Hello World** button and see what happens. Did the label's text change to "Hello, world!"? It should have! You should also see "Pressed Hello World button" logged to the debug console.
+
+![Hello, world!](.images/xcode14.png)
+
+If you pressed any of the other buttons, you should see that they didn't do anything. Why not? Right now, they're not connected to any IB actions. Time to wire them up! Add a new IB action from the **Goodbye World** button to your `ViewController.swift` file. Name it `goodbyeWorld`. Don't forget to set the **Connection** type to **Action**!
+
+![Add a new IB action](.images/xcode15.png)
+
+Once again, add a `print()` statement to the body of `goodbyeWorld(sender:)`, then change the label text to "Goodbye, world!".
+
+You can build and run the app again, but you still have a problem: The **Unicorn!** button is not hooked up yet. Can you figure out how to do that yourself?
+
+Here's a hint: Add another IB action the same way you did before. <kbd>Control</kbd>-drag from the **Unicorn!** button to `ViewController.swift`, and create an action named `unicorn`. As before, the method body should include a `print()` statement to demonstrate that it has been called. It should also change the text of the label to "🦄" (yes, you can use emoji in Swift strings).
+
+Now your complete definition of `ViewController` should look like this:
+
+```swift
+class ViewController: UIViewController {
+
+    @IBOutlet weak var textDisplay: UILabel!
+
+    @IBAction func helloWorld(sender: AnyObject) {
+        print("Pressed Hello World button")
+        textDisplay.text = "Hello, world!"
+    }
+
+    @IBAction func goodbyeWorld(sender: AnyObject) {
+        print("Pressed Goodbye World button")
+        textDisplay.text = "Goodbye, world!"
+    }
+
+    @IBAction func unicorn(sender: AnyObject) {
+        print("Pressed Unicorn! button")
+        textDisplay.text = "🦄"
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        textDisplay.text = "Zzz..."
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
+```
+
+Build and run your app again. Does the text label change appropriately based on the buttons you pressed?
+
+You should also see some output in Xcode's debug console:
+
+![Debug output](.images/xcode16.png)
+
+Congratulations! You've written your first app that actually _does something_ in response to user input. In subsequent lessons, you'll learn how to write more complex apps that do even more complicated things, but for the time being, relish in your newfound knowledge.
 
 <a href='https://learn.co/lessons/OutletTargetAction' data-visibility='hidden'>View this lesson on Learn.co</a>

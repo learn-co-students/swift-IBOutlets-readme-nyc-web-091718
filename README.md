@@ -5,24 +5,12 @@
 
 ## Learning Objectives - The student should be able to...
 
-* Explain that the files they will write their code in within Xcode will be the `.swift` files they see in the Project Navigator.
-* Connect the View Controller in the storyboard file to the `ViewController.swift` file.
+* Explain that the files they will write their code in within Xcode will be the `.swift` files they see in the Project Navigator
+* Connect the View Controller in the storyboard file to the `ViewController.swift` file
 * Locate and use the Assistant Editor
-* Pull up the Assistant Editor using the hotkey <kbd>Command</kbd> + <kbd>Option</kbd> + <kbd>Return</kbd>.
+* Pull up the Assistant Editor using the hotkey <kbd>Command</kbd> + <kbd>Option</kbd> + <kbd>Return</kbd>
 * Hide the Assistant Editor using the hotkey <kbd>command</kbd> + <kbd>Return</kbd>.
-* <kbd>Control</kbd> + drag a Label/Button/View from the View Controller into their `ViewController.swift` file and name it. They should know the proper naming convention, similar to how they've been naming their variables (lower camel case)
-
-## What the student can do at this point
-
-* Has a general overview of Xcode and is able to create a new project.
-* Knows where to locate the testing file within Xcode.
-* Knows how to navigate to Interface Builder.
-* Knows what a storyboard file is.
-* Has a brief overview of what the Object Library is.
-* Can drag a View Controller onto the canvas.
-* Can locate and drag items from the Object Library.
-* Can locate the Attributes Inspector and change the Background color of Views
-* They will have just learned how to connect the `ViewController.swift` file and understand its view life cycle.
+* Use <kbd>Control</kbd> + drag a Label/Button/View from the View Controller into their `ViewController.swift` file and name it
 
 ## Designing the Interface
 

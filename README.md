@@ -8,9 +8,9 @@
 * Explain that the files they will write their code in within Xcode will be the `.swift` files they see in the Project Navigator
 * Connect the View Controller in the storyboard file to the `ViewController.swift` file
 * Locate and use the Assistant Editor
-* Pull up the Assistant Editor using the hotkey <kbd>Command</kbd> + <kbd>Option</kbd> + <kbd>Return</kbd>
-* Hide the Assistant Editor using the hotkey <kbd>command</kbd> + <kbd>Return</kbd>.
-* Use <kbd>Control</kbd> + drag a Label/Button/View from the View Controller into their `ViewController.swift` file and name it
+* Pull up the Assistant Editor using the hotkey Command + Option + Return
+* Hide the Assistant Editor using the hotkey Command + Return
+* Use Control + drag a Label/Button/View from the View Controller into their `ViewController.swift` file and name it
 
 ## Designing the Interface
 

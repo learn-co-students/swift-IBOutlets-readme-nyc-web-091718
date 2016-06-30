@@ -3,7 +3,7 @@
 ![Drawing](http://i.imgur.com/fD3ROGh.png?1)
 > Do, or do not. There is no 'try'. -[Yoda](https://en.wikipedia.org/wiki/Yoda)
 
-## Learning Objectives - The student should be able to...
+## Learning Objectives
 
 * Explain that the files they will write their code in within Xcode will be the `.swift` files they see in the Project Navigator
 * Connect the View Controller in the storyboard file to the `ViewController.swift` file
@@ -22,15 +22,15 @@ Right now, both these files are mostly empty. Let's start with designing the int
 
 Like before, your app first needs a _view controller_. Drag a new view controller from the object library onto `Main.storyboard`'s canvas.
 
-![Create a new view controller](.images/xcode01.png)
+![Create a new view controller](http://i.imgur.com/s2uXjgG.png)
 
 The first thing you need to do is associate this view controller with the code you are about to write. The Xcode project already includes a file called `ViewController.swift`, which defines one class, `ViewController` (creative names, huh?). You can associate your new view controller with this class in the Attribute Inspector. First, make sure that **View Controller** is selected in the object listing.
 
-![View Controller](.images/xcode02.png)
+![View Controller](http://i.imgur.com/8BWrwGk.png)
 
 Then bring up the Attributes Inspector. The section at the top is called **Custom Class**. This is where you will associate the view controller with its code. In the **Class** text box, start typing in `ViewController`. After you type a few letters (probably just `V`, in fact), the full name `ViewController`, will autocomplete. You can press <kbd>Return</kbd> to accept the autocompletion, or type out `ViewController` yourself. Either way, make sure `ViewController` is entered in the **Class** text field.
 
-![ViewController](.images/xcode03.png)
+![ViewController](http://i.imgur.com/KB0hrwK.png)
 
 You can click the grey arrow next to **ViewController** in the **Class** text field, which should open `ViewController.swift` in an editor pane. This will show that you have correctly set up the association between the view controller in `Main.storyboard` and the code that backs it. You're not quite ready to write any code yet, though, so switch back to `Main.storyboard`, either by hitting the back button in Xcode's navigate ribbon, or by clicking on `Main.storyboard` in the file listing.
 
@@ -48,17 +48,17 @@ Not a lot of stuff there, but it's enough to get a thorough demonstrate of how t
 
 First, let's put the label on the main view. Find a label in the object library (remember, you can filter the library by a search string) and drop it in the middle of the interface.
 
-![Add a new label](.images/xcode04.png)
+![Add a new label](http://i.imgur.com/1psWNLs.png)
 
 Resize it horizontally so it takes up most of the width of the view. In its Attributes Inspector, change its text alignment so the text is centered.
 
-![Centered text](.images/xcode11.png)
+![Centered text](http://i.imgur.com/4AsP26P.png)
 
 Build and run your application. Did you see your interface with the label in the simulator?
 
 Probably not! You probably got this error message in the debugger console instead:
 
-![Error!](.images/xcode05.png)
+![Error!](http://i.imgur.com/HeEEfT6.png)
 
 What does that error mean?
 
@@ -66,7 +66,7 @@ Think back to your previous lessons. Are you forgetting something? Maybe…an _i
 
 Quit the simulator and go back to Xcode. Select the view controller in your Interface Builder editor. In the Attributes Inspector, make sure **Is Initial View Controller** is checked.
 
-![Is Initial View Controller](.images/xcode06.png)
+![Is Initial View Controller](http://i.imgur.com/tTCT7Le.png)
 
 Now try building and running your application again. This time it should work flawlessly, but there's still not much to it. Before you write some code, though, finish up with the layout of the interface.
 
@@ -90,15 +90,15 @@ Firs things first: You want button presses to change the text label in your inte
 
 The first thing you want to do is display your view's code alongside the view itself. Xcode offers a handy way of doing this: the Assistant Editor. Do you see the two sets of buttons in the top right corner of the Xcode toolbar? The second one from the left, marked with two circles, allows you to open up the Assistant Editor.
 
-![Assistant Editor button](.images/xcode08.png)
+![Assistant Editor button](http://i.imgur.com/2qWZ7O2.png)
 
 This will open up `ViewController.swift` in an editor pane. If you're on a small screen, you might want to put the editor on the _bottom_ instead of the left hand side, which you can do by selecting **Assistant Editors on Bottom** from the Assistant Editor button.
 
-![Assistant Editors on Bottom](.images/xcode07.png)
+![Assistant Editors on Bottom](http://i.imgur.com/yVnwlft.png)
 
 After you've opened the editor, you should see `ViewController.swift` at the bottom of your screen.
 
-![`ViewController.swift`](.images/xcode09.png)
+![`ViewController.swift`](http://i.imgur.com/7GE7yzd.png)
 
 This will make it a lot easier to enter new code and show the relationship between the code and your user interface.
 
@@ -133,7 +133,7 @@ What's going on with this code? First, you told the Swift compiler that you were
 
 Now it's time to connect this outlet to its user interface component! Xcode makes this really, really easy. You see how there's a little grey dot next to the line of code you just added? That's how you connect your `textDisplay` variable to a user interface component. Click and hold your cursor on the little dot, then drag your cursor to the label (helpfully marked **Label**) in your user interface. (If you're on a small screen, you may have to scroll the Interface Builder pane down a bit in order to see the label.) Drag the cursor over the label. Once it is highlighted, release your mouse button. The connection has now been set up. You can confirm this by checking the dot next to the line of code you added: It should be filled in now, instead of empty.
 
-![IBOutlet connection](.images/xcode10.png)
+![IBOutlet connection](http://i.imgur.com/AFIsExV.png)
 
 In order to demonstrate this connection, change the label from the default ("Label") to "Zzz..." in the view controller's `viewDidLoad()` method. Add this line to the end of `viewDidLoad()`:
 
@@ -172,11 +172,11 @@ If you guessed "functions" or "methods", you're absolutely correct. An _IB actio
 
 Creating new IB actions in Xcode is easy (and kind of fun!). First, hold down <kbd>Control</kbd> and drag from the **Hello World** button in your interface to the `ViewController.swift` file. (Make sure you hold down <kbd>Control</kbd> and _drag_—if you just click, you will bring up a contextual menu.) Drag your mouse to the empty space _above_ (not _inside!_) the `viewDidLoad()` method, then release the mouse button.
 
-![Drag a new IB action](.images/xcode12.png)
+![Drag a new IB action](http://i.imgur.com/YZd3oFu.png)
 
 You will get a popup prompting you to set the type of the connection, and give it a name. Make sure the **Connection** type is set to **Action** (it is set to **Outlet** by default!) and change the **Name** to `helloWorld`, then click the **Connect** button.
 
-![Create a new IB action](.images/xcode13.png)
+![Create a new IB action](http://i.imgur.com/tnyhQ2f.png)
 
 You'll see a new method in your `ViewController` definition:
 
@@ -227,11 +227,11 @@ class ViewController: UIViewController {
 
 Build and run your application. Press the **Hello World** button and see what happens. Did the label's text change to "Hello, world!"? It should have! You should also see "Pressed Hello World button" logged to the debug console.
 
-![Hello, world!](.images/xcode14.png)
+![Hello, world!](http://i.imgur.com/CeuPVfD.png)
 
 If you pressed any of the other buttons, you should see that they didn't do anything. Why not? Right now, they're not connected to any IB actions. Time to wire them up! Add a new IB action from the **Goodbye World** button to your `ViewController.swift` file. Name it `goodbyeWorld`. Don't forget to set the **Connection** type to **Action**!
 
-![Add a new IB action](.images/xcode15.png)
+![Add a new IB action](http://i.imgur.com/D1zDwng.png)
 
 Once again, add a `print()` statement to the body of `goodbyeWorld(sender:)`, then change the label text to "Goodbye, world!".
 
@@ -277,7 +277,7 @@ Build and run your app again. Does the text label change appropriately based on 
 
 You should also see some output in Xcode's debug console:
 
-![Debug output](.images/xcode16.png)
+![Debug output](http://i.imgur.com/8y9Rt7P.png)
 
 Congratulations! You've written your first app that actually _does something_ in response to user input. In subsequent lessons, you'll learn how to write more complex apps that do even more complicated things, but for the time being, relish in your newfound knowledge.
 

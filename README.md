@@ -170,7 +170,7 @@ Consider the problem: You want your code to respond to button presses. You kind 
 
 If you guessed "functions" or "methods", you're absolutely correct. An _IB action_ is nothing more than a method in your view controller class that is tied to a user interface element. When the user interacts with the element (pressing it, entering text, swiping it, and so forth), the method associated with that element is called.
 
-Creating new IB actions in Xcode is easy (and kind of fun!). First, hold down <kbd>Control</kbd> and drag from the **Hello World** button in your interface to the `ViewController.swift` file. (Make sure you hold down <kbd>Control</kbd> and _drag_—if you just click, you will bring up a contextual menu.) Drag your mouse to the empty space _above_ (not _inside!_) the `viewDidLoad()` method, then release the mouse button.
+Creating new IB actions in Xcode is easy (and kind of fun!). First, hold down Control and drag from the **Hello World** button in your interface to the `ViewController.swift` file. (Make sure you hold down Control and _drag_—if you just click, you will bring up a contextual menu.) Drag your mouse to the empty space _above_ (not _inside!_) the `viewDidLoad()` method, then release the mouse button.
 
 ![Drag a new IB action](http://i.imgur.com/YZd3oFu.png)
 
@@ -237,7 +237,7 @@ Once again, add a `print()` statement to the body of `goodbyeWorld(sender:)`, th
 
 You can build and run the app again, but you still have a problem: The **Unicorn!** button is not hooked up yet. Can you figure out how to do that yourself?
 
-Here's a hint: Add another IB action the same way you did before. <kbd>Control</kbd>-drag from the **Unicorn!** button to `ViewController.swift`, and create an action named `unicorn`. As before, the method body should include a `print()` statement to demonstrate that it has been called. It should also change the text of the label to "🦄" (yes, you can use emoji in Swift strings).
+Here's a hint: Add another IB action the same way you did before. Control-drag from the **Unicorn!** button to `ViewController.swift`, and create an action named `unicorn`. As before, the method body should include a `print()` statement to demonstrate that it has been called. It should also change the text of the label to "🦄" (yes, you can use emoji in Swift strings).
 
 Now your complete definition of `ViewController` should look like this:
 

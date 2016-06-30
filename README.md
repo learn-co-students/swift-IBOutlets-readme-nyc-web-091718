@@ -1,7 +1,7 @@
 # IBOutlets & IBActions
 
-![Drawing](http://cdn2.hubspot.net/hubfs/326641/yoda.jpg)
-> Do, or do not. There is no 'try'.
+![Drawing](http://i.imgur.com/fD3ROGh.png?1)
+> Do, or do not. There is no 'try'. -[Yoda](https://en.wikipedia.org/wiki/Yoda)
 
 ## Learning Objectives - The student should be able to...
 

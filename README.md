@@ -28,7 +28,7 @@ The first thing you need to do is associate this view controller with the code y
 
 ![View Controller](http://i.imgur.com/8BWrwGk.png)
 
-Then bring up the Attributes Inspector. The section at the top is called **Custom Class**. This is where you will associate the view controller with its code. In the **Class** text box, start typing in `ViewController`. After you type a few letters (probably just `V`, in fact), the full name `ViewController`, will autocomplete. You can press <kbd>Return</kbd> to accept the autocompletion, or type out `ViewController` yourself. Either way, make sure `ViewController` is entered in the **Class** text field.
+Then bring up the Attributes Inspector. The section at the top is called **Custom Class**. This is where you will associate the view controller with its code. In the **Class** text box, start typing in `ViewController`. After you type a few letters (probably just `V`, in fact), the full name `ViewController`, will autocomplete. You can press Return to accept the autocompletion, or type out `ViewController` yourself. Either way, make sure `ViewController` is entered in the **Class** text field.
 
 ![ViewController](http://i.imgur.com/KB0hrwK.png)
 

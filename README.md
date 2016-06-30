@@ -58,7 +58,7 @@ Build and run your application. Did you see your interface with the label in the
 
 Probably not! You probably got this error message in the debugger console instead:
 
-![Error!](http://i.imgur.com/HeEEfT6.png)
+![Error](http://i.imgur.com/HeEEfT6.png)
 
 What does that error mean?
 
@@ -98,7 +98,7 @@ This will open up `ViewController.swift` in an editor pane. If you're on a small
 
 After you've opened the editor, you should see `ViewController.swift` at the bottom of your screen.
 
-![`ViewController.swift`](http://i.imgur.com/7GE7yzd.png)
+![vcSwift](http://i.imgur.com/7GE7yzd.png)
 
 This will make it a lot easier to enter new code and show the relationship between the code and your user interface.
 
@@ -227,7 +227,7 @@ class ViewController: UIViewController {
 
 Build and run your application. Press the **Hello World** button and see what happens. Did the label's text change to "Hello, world!"? It should have! You should also see "Pressed Hello World button" logged to the debug console.
 
-![Hello, world!](http://i.imgur.com/CeuPVfD.png)
+![HelloWorld](http://i.imgur.com/CeuPVfD.png)
 
 If you pressed any of the other buttons, you should see that they didn't do anything. Why not? Right now, they're not connected to any IB actions. Time to wire them up! Add a new IB action from the **Goodbye World** button to your `ViewController.swift` file. Name it `goodbyeWorld`. Don't forget to set the **Connection** type to **Action**!
 

@@ -3,9 +3,13 @@
 ![Drawing](http://i.imgur.com/fD3ROGh.png?1)
 > Do, or do not. There is no 'try'. -[Yoda](https://en.wikipedia.org/wiki/Yoda)
 
+## Overview
+
+In this lesson, we'll dive into the way in which graphical components of our application are tied to our Swift code, so that we can make our app respond to user actions like button presses.
+
+
 ## Learning Objectives
 
-* Explain that the files they will write their code in within Xcode will be the `.swift` files they see in the Project Navigator
 * Connect the View Controller in the storyboard file to the `ViewController.swift` file
 * Locate and use the Assistant Editor
 * Pull up the Assistant Editor using the hotkey Command + Option + Return
@@ -13,8 +17,6 @@
 * Use Control + drag a Label/Button/View from the View Controller into their `ViewController.swift` file and name it
 
 ## Designing the Interface
-
-So far in your lessons, you have learned how to navigate Xcode to build graphical user interfaces. You have learned about the view life cycle, and how to write some code to power your application. In this lesson, you'll be introduced to the way in which graphical components of your application are tied to your Swift code, in order to make your app respond to user actions like button presses.
 
 To get started, open up the Xcode project distributed in this repo (it's at `IBOutletFun/IBOutletFun.xcodeproj`). Take a look at some of the files included in the project, particularly `Main.storyboard` and `ViewController.swift`. Like before, you will design your app's interface in `Main.storyboard`, and write the code that makes it work in `ViewController.swift`.
 
@@ -281,6 +283,6 @@ You should also see some output in Xcode's debug console:
 
 ![Debug output](http://i.imgur.com/8y9Rt7P.png)
 
-Congratulations! You've written your first app that actually _does something_ in response to user input. In subsequent lessons, you'll learn how to write more complex apps that do even more complicated things, but for the time being, relish in your newfound knowledge.
+Congratulations! You've written your first app that actually _does something_ in response to user input. Relish in your newfound knowledge.
 
 <a href='https://learn.co/lessons/OutletTargetAction' data-visibility='hidden'>View this lesson on Learn.co</a>

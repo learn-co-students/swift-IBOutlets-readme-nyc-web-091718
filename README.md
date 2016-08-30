@@ -88,7 +88,7 @@ Swift code is associated with graphical interface elements through the use of ou
 
 ### IB Outlets
 
-Firs things first: You want button presses to change the text label in your interface. Your code first has to know that the text label even exists and link to it. It does this by creating an _IB outlet_ between the view controller code and the text label.
+First things first: You want button presses to change the text label in your interface. Your code first has to know that the text label even exists and link to it. It does this by creating an _IB outlet_ between the view controller code and the text label.
 
 The first thing you want to do is display your view's code alongside the view itself. Xcode offers a handy way of doing this: the Assistant Editor. Do you see the two sets of buttons in the top right corner of the Xcode toolbar? The second one from the left, marked with two circles, allows you to open up the Assistant Editor.
 
@@ -286,3 +286,5 @@ You should also see some output in Xcode's debug console:
 Congratulations! You've written your first app that actually _does something_ in response to user input. Relish in your newfound knowledge.
 
 <a href='https://learn.co/lessons/OutletTargetAction' data-visibility='hidden'>View this lesson on Learn.co</a>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/swift-IBOutlets-readme'>IBOutlets & IBActions</a> on Learn.co and start learning to code for free.</p>

@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		5BB9F3E21CEF505D00466A23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9F3E11CEF505D00466A23 /* AppDelegate.swift */; };
-		5BB9F3E41CEF505D00466A23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB9F3E31CEF505D00466A23 /* ViewController.swift */; };
 		5BB9F3E71CEF505D00466A23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB9F3E51CEF505D00466A23 /* Main.storyboard */; };
 		5BB9F3E91CEF505D00466A23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB9F3E81CEF505D00466A23 /* Assets.xcassets */; };
 		5BB9F3EC1CEF505D00466A23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB9F3EA1CEF505D00466A23 /* LaunchScreen.storyboard */; };
+		7D5DB0231D8F295500E1E2A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5DB0221D8F295500E1E2A2 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5BB9F3DE1CEF505D00466A23 /* IBOutletFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBOutletFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB9F3E11CEF505D00466A23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5BB9F3E31CEF505D00466A23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5BB9F3E61CEF505D00466A23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BB9F3E81CEF505D00466A23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BB9F3EB1CEF505D00466A23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BB9F3ED1CEF505D00466A23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D5DB0221D8F295500E1E2A2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +54,8 @@
 		5BB9F3E01CEF505D00466A23 /* IBOutletFun */ = {
 			isa = PBXGroup;
 			children = (
+				7D5DB0221D8F295500E1E2A2 /* ViewController.swift */,
 				5BB9F3E11CEF505D00466A23 /* AppDelegate.swift */,
-				5BB9F3E31CEF505D00466A23 /* ViewController.swift */,
 				5BB9F3E51CEF505D00466A23 /* Main.storyboard */,
 				5BB9F3E81CEF505D00466A23 /* Assets.xcassets */,
 				5BB9F3EA1CEF505D00466A23 /* LaunchScreen.storyboard */,
@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					5BB9F3DD1CEF505D00466A23 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -135,7 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BB9F3E41CEF505D00466A23 /* ViewController.swift in Sources */,
+				7D5DB0231D8F295500E1E2A2 /* ViewController.swift in Sources */,
 				5BB9F3E21CEF505D00466A23 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +254,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flatironSchool.IBOutletFun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -264,6 +266,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flatironSchool.IBOutletFun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -286,6 +289,7 @@
 				5BB9F3F21CEF505D00466A23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
